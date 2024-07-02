@@ -1,0 +1,14 @@
+cc_library(
+    name = "my_library",
+    srcs = ["my_library.cc"],
+    hdrs = ["my_library.h"],
+    visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "my_binary",
+    srcs = ["my_binary.cc"],
+    deps = [
+        ":my_library",
+    ],
+)
